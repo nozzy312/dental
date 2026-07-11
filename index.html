@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Irena Hazon, RDH — Registered Dental Hygienist in Queens, NY. Over ten years of clinical experience elevating patient care, case acceptance, and team collaboration.">
+<title>Irena Hazon, RDH — Registered Dental Hygienist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBFAF7;
+    --surface: #FFFFFF;
+    --tint: #E9F1ED;
+    --ink: #1C2B28;
+    --ink-soft: #4A635C;
+    --accent: #0E6B5C;
+    --accent-strong: #0A4A40;
+    --on-accent: #F3FAF7;
+    --line: #DCE5E0;
+    --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --body: 'Public Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F1B18;
+      --surface: #152420;
+      --tint: #16302A;
+      --ink: #E8EFEB;
+      --ink-soft: #9DB5AD;
+      --accent: #5CC4AD;
+      --accent-strong: #8ADCC9;
+      --on-accent: #0B1F1A;
+      --line: #24382F;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FBFAF7;
+    --surface: #FFFFFF;
+    --tint: #E9F1ED;
+    --ink: #1C2B28;
+    --ink-soft: #4A635C;
+    --accent: #0E6B5C;
+    --accent-strong: #0A4A40;
+    --on-accent: #F3FAF7;
+    --line: #DCE5E0;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1B18;
+    --surface: #152420;
+    --tint: #16302A;
+    --ink: #E8EFEB;
+    --ink-soft: #9DB5AD;
+    --accent: #5CC4AD;
+    --accent-strong: #8ADCC9;
+    --on-accent: #0B1F1A;
+    --line: #24382F;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ---------- Header ---------- */
+  header {
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 0.9rem 1.5rem; max-width: 1060px; margin: 0 auto;
+  }
+  .wordmark {
+    font-family: var(--display); font-weight: 600; font-size: 1.15rem;
+    color: var(--ink); text-decoration: none; letter-spacing: 0.01em;
+  }
+  .wordmark small {
+    font-family: var(--body); font-weight: 600; font-size: 0.7rem;
+    color: var(--accent); letter-spacing: 0.14em; margin-left: 0.5rem; vertical-align: 2px;
+  }
+  .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+  .nav-links a {
+    color: var(--ink-soft); text-decoration: none;
+    font-size: 0.9rem; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+  @media (max-width: 640px) { .nav-links a:not(.btn) { display: none; } }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 600;
+    padding: 0.8rem 1.5rem; border-radius: 3px;
+    background: var(--accent); color: var(--on-accent);
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: var(--accent-strong); }
+  .btn.ghost {
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .btn.ghost:hover { background: var(--tint); }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; }
+  .hero::after {
+    content: ""; position: absolute; pointer-events: none;
+    right: -180px; top: -260px; width: 640px; height: 640px;
+    border: 1.5px solid var(--accent); border-radius: 50%;
+    opacity: 0.18;
+  }
+  .hero::before {
+    content: ""; position: absolute; pointer-events: none;
+    right: -120px; top: -200px; width: 520px; height: 520px;
+    border: 1.5px solid var(--accent); border-radius: 50%;
+    opacity: 0.1;
+  }
+  .hero-inner { padding: 6rem 0 5.5rem; max-width: 780px; }
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(2.5rem, 6vw, 4.1rem);
+    line-height: 1.08; letter-spacing: -0.015em;
+    text-wrap: balance; margin: 1.1rem 0 1.4rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p.lede {
+    font-size: 1.2rem; color: var(--ink-soft); max-width: 58ch;
+    margin-bottom: 2.2rem;
+  }
+  .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+  .section-grid {
+    display: grid; grid-template-columns: 220px 1fr; gap: 3rem;
+  }
+  @media (max-width: 760px) { .section-grid { grid-template-columns: 1fr; gap: 1.4rem; } }
+  .section-label { position: sticky; top: 5.2rem; align-self: start; }
+  .section-label .eyebrow { display: block; }
+  h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.18;
+    letter-spacing: -0.01em; text-wrap: balance; margin-bottom: 1.2rem;
+  }
+  .prose { max-width: 62ch; }
+  .prose p + p { margin-top: 1rem; }
+  .prose strong { color: var(--ink); }
+
+  /* ---------- Outcomes ---------- */
+  .cards {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem; margin-top: 2.4rem;
+  }
+  @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--tint); border-radius: 6px;
+    padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 0.7rem;
+  }
+  .card h3 {
+    font-family: var(--display); font-weight: 600;
+    font-size: 1.3rem; line-height: 1.25; text-wrap: balance;
+  }
+  .card p { color: var(--ink-soft); font-size: 0.98rem; }
+  .card .tag {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+  }
+
+  /* ---------- Strengths ---------- */
+  .strengths {
+    list-style: none; padding: 0; margin-top: 0.4rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 2.4rem;
+  }
+  @media (max-width: 680px) { .strengths { grid-template-columns: 1fr; } }
+  .strengths li { padding-left: 1.4rem; position: relative; }
+  .strengths li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em;
+    width: 0.55rem; height: 0.55rem; border-radius: 50%;
+    background: var(--accent);
+  }
+  .strengths b { display: block; font-weight: 600; }
+  .strengths span { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ---------- Experience ---------- */
+  .role {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 6px; padding: 1.6rem 1.7rem; max-width: 640px;
+  }
+  .role h3 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; }
+  .role .meta { color: var(--ink-soft); font-size: 0.92rem; margin: 0.2rem 0 0.8rem; }
+  .role p { color: var(--ink-soft); font-size: 0.98rem; }
+  .exp-note { margin-top: 1.2rem; font-size: 0.92rem; color: var(--ink-soft); }
+
+  /* ---------- Pull quote ---------- */
+  .pull {
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.35;
+    max-width: 30ch; text-wrap: balance;
+    border-left: 3px solid var(--accent); padding-left: 1.4rem;
+    margin-top: 1.8rem; color: var(--ink);
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta-band { border-top: 1px solid var(--line); }
+  .cta-inner {
+    background: var(--accent-strong); color: var(--on-accent);
+    border-radius: 10px; padding: 3.2rem 2.4rem; margin: 4.5rem 0;
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 1.6rem;
+  }
+  :root[data-theme="dark"] .cta-inner, .dark-cta { color: var(--on-accent); }
+  .cta-inner h2 { margin-bottom: 0.4rem; color: inherit; }
+  .cta-inner p { opacity: 0.85; max-width: 46ch; }
+  .cta-inner .btn { background: var(--bg); color: var(--ink); white-space: nowrap; }
+  .cta-inner .btn:hover { background: var(--tint); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 0 2.6rem; color: var(--ink-soft); font-size: 0.9rem;
+  }
+  .foot { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+  footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="#top">Irena Hazon <small>RDH</small></a>
+    <div class="nav-links">
+      <a href="#impact">Impact</a>
+      <a href="#about">About</a>
+      <a href="#chairside">Chairside</a>
+      <a href="#experience">Experience</a>
+      <a class="btn" href="https://www.linkedin.com/in/irenahazon/">Connect on LinkedIn</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Registered Dental Hygienist · Queens, New York</span>
+      <h1>The hygiene chair is where patients decide to say <em>yes</em>.</h1>
+      <p class="lede">I'm Irena Hazon, a registered dental hygienist with over ten years of clinical experience. I partner with practices that want deeper patient trust, higher case acceptance, and a team that works as one.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="https://www.linkedin.com/in/irenahazon/">Connect on LinkedIn</a>
+        <a class="btn ghost" href="#impact">See the impact</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="impact">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-label"><span class="eyebrow">Impact</span></div>
+        <div>
+          <h2>Hygiene is not a cost center. Done well, it is how a practice grows.</h2>
+          <p class="prose">Most treatment plans are accepted — or quietly declined — long before the doctor enters the room. The hour a patient spends in the hygiene chair sets the tone for everything that follows.</p>
+          <div class="cards">
+            <article class="card">
+              <span class="tag">Trust</span>
+              <h3>Care patients come back for</h3>
+              <p>A gentle touch and a meticulous approach earn loyalty. Patients specifically request Irena for their routine visits — and returning patients are the foundation of a healthy recall schedule.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Case acceptance</span>
+              <h3>Education that turns findings into yes</h3>
+              <p>Clear chairside communication helps patients genuinely understand their oral health, so recommended treatment feels like their decision — not a sales pitch.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Teamwork</span>
+              <h3>Collaboration that compounds</h3>
+              <p>Smooth handoffs to the doctor, thorough documentation, and real partnership with assistants and the front desk make the whole practice run better.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-label"><span class="eyebrow">About</span></div>
+        <div class="prose">
+          <h2>A decade of clinical excellence, built on genuine care.</h2>
+          <p>Irena is a highly skilled and compassionate dental hygienist with <strong>over ten years of clinical experience</strong> dedicated to delivering exceptional patient care. Known for her gentle touch and meticulous approach, she has earned the trust and admiration of her patients — many of whom specifically request her for their routine visits.</p>
+          <p>Committed to excellence, Irena stays current with the latest advancements in dentistry through <strong>continuing education</strong> and ongoing training, ensuring she brings modern techniques, technologies, and evidence-based practices to preventive care.</p>
+          <p>She believes building strong relationships is just as important as clinical excellence — and that trust is built through clear communication and genuine care, one patient at a time.</p>
+          <p class="pull">Clinical excellence gets patients healthy. Genuine care keeps them coming back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chairside">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-label"><span class="eyebrow">Chairside</span></div>
+        <div>
+          <h2>What I bring to your practice</h2>
+          <ul class="strengths">
+            <li><b>Preventive &amp; periodontal care</b><span>Thorough, comfortable prophylaxis and perio maintenance grounded in evidence-based protocols.</span></li>
+            <li><b>Patient education</b><span>Plain-language explanations of findings and home care that patients actually follow.</span></li>
+            <li><b>Co-diagnosis support</b><span>Careful charting and pre-framing of findings so the doctor's exam confirms rather than surprises.</span></li>
+            <li><b>Recall &amp; retention</b><span>The kind of visit experience that keeps hygiene schedules full and reactivates lapsed patients.</span></li>
+            <li><b>Modern techniques &amp; technology</b><span>Continuously trained through CE courses in current instruments, materials, and methods.</span></li>
+            <li><b>A calming patient experience</b><span>A warm demeanor that puts anxious patients at ease and turns first visits into long-term relationships.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-label"><span class="eyebrow">Experience</span></div>
+        <div>
+          <h2>Where I practice</h2>
+          <div class="role">
+            <h3>Registered Dental Hygienist</h3>
+            <p class="meta">ZenDentistry · Forest Hills, Queens, NY</p>
+            <p>Delivering preventive and periodontal care with a focus on patient education, comfort, and long-term oral health — as part of a collaborative, patient-first clinical team.</p>
+          </div>
+          <p class="exp-note">Full work history, education, and licensure available on <a href="https://www.linkedin.com/in/irenahazon/">LinkedIn</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner dark-cta">
+        <div>
+          <h2>Let's talk about your patients.</h2>
+          <p>If your practice is looking for a hygienist who strengthens patient relationships and supports the whole team, I'd love to connect.</p>
+        </div>
+        <a class="btn" href="https://www.linkedin.com/in/irenahazon/">Message me on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>Irena Hazon, RDH — Registered Dental Hygienist, Queens, NY</span>
+    <span><a href="https://www.linkedin.com/in/irenahazon/">LinkedIn</a></span>
+  </div>
+</footer>
+</body>
+</html>
