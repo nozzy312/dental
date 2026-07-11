@@ -106,7 +106,7 @@
   }
   .nav-links a:hover { color: var(--accent); }
   .nav-links .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
-  @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
+  @media (max-width: 720px) { .nav-links a:not(:last-child) { display: none; } }
 
   /* ---------- Buttons ---------- */
   .btn {
@@ -334,7 +334,6 @@
       <a href="#experience">Experience</a>
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
-      <a class="btn" href="https://www.linkedin.com/in/irenahazon/">Connect on LinkedIn</a>
     </div>
   </nav>
 </header>
