@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
 <meta name="description" content="Irena Hazon, RDH — coach, consultant, and speaker helping dental practices increase trust, case acceptance, and patient loyalty. Los Angeles, CA.">
 <title>Irena Hazon, RDH — Where Dentistry Meets Human Connection</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,19 +23,8 @@
     --display: 'Fraunces', Georgia, 'Times New Roman', serif;
     --body: 'Public Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0F1926;
-      --surface: #152232;
-      --tint: #1A2E44;
-      --ink: #E7EEF5;
-      --ink-soft: #9FB3C8;
-      --accent: #7FB1E3;
-      --accent-strong: #A9CCF0;
-      --on-accent: #0E1C2C;
-      --line: #253850;
-    }
-  }
+  /* The site intentionally uses a single light theme to match Irena's
+     brand — device dark mode does not change the palette. */
   :root[data-theme="light"] {
     --bg: #F7FAFC;
     --surface: #FFFFFF;
@@ -46,18 +36,6 @@
     --on-accent: #F3F8FD;
     --line: #D9E4EE;
   }
-  :root[data-theme="dark"] {
-    --bg: #0F1926;
-    --surface: #152232;
-    --tint: #1A2E44;
-    --ink: #E7EEF5;
-    --ink-soft: #9FB3C8;
-    --accent: #7FB1E3;
-    --accent-strong: #A9CCF0;
-    --on-accent: #0E1C2C;
-    --line: #253850;
-  }
-
   * { box-sizing: border-box; margin: 0; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) {
