@@ -272,24 +272,29 @@
     margin-top: 1.8rem; color: var(--ink);
   }
 
-  /* ---------- CTA band ---------- */
-  .cta-band { border-top: 1px solid var(--line); }
-  .cta-inner {
-    background: var(--accent-strong); color: var(--on-accent);
-    border-radius: 10px; padding: 3.2rem 2.4rem; margin: 4.5rem 0;
-    display: flex; flex-wrap: wrap; align-items: center;
-    justify-content: space-between; gap: 1.6rem;
+  /* ---------- Contact ---------- */
+  .contact-cards {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;
+    margin-top: 2rem; max-width: 760px;
   }
-  .cta-inner h2 { margin-bottom: 0.4rem; color: inherit; }
-  .cta-inner p { opacity: 0.85; max-width: 46ch; }
-  .cta-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-  .cta-inner .btn { background: var(--bg); color: var(--ink); white-space: nowrap; }
-  .cta-inner .btn:hover { background: var(--tint); }
-  .cta-inner .btn.ghost {
-    background: transparent; color: var(--on-accent);
-    border: 1px solid color-mix(in srgb, var(--on-accent) 55%, transparent);
+  @media (max-width: 680px) { .contact-cards { grid-template-columns: 1fr; } }
+  .contact-card {
+    background: var(--tint); border-radius: 8px;
+    padding: 1.9rem 1.7rem;
+    display: flex; flex-direction: column; gap: 0.55rem; align-items: flex-start;
   }
-  .cta-inner .btn.ghost:hover { background: color-mix(in srgb, var(--on-accent) 12%, transparent); }
+  .contact-card .tag {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .contact-card h3 {
+    font-family: var(--display); font-weight: 600;
+    font-size: 1.25rem; line-height: 1.3; word-break: break-word;
+  }
+  .contact-card h3 a { color: var(--ink); text-decoration: none; }
+  .contact-card h3 a:hover { color: var(--accent); }
+  .contact-card p { color: var(--ink-soft); font-size: 0.95rem; }
+  .contact-card .btn { margin-top: 0.8rem; }
 
   footer {
     border-top: 1px solid var(--line);
@@ -311,6 +316,7 @@
       <a href="#perspectives">Perspectives</a>
       <a href="#experience">Experience</a>
       <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
       <a class="btn" href="https://www.linkedin.com/in/irenahazon/">Connect on LinkedIn</a>
     </div>
   </nav>
@@ -475,20 +481,31 @@
     </div>
   </section>
 
-  <div class="cta-band">
+  <section id="contact">
     <div class="wrap">
-      <div class="cta-inner">
+      <div class="section-grid">
+        <div class="section-label"><span class="eyebrow">Contact</span></div>
         <div>
           <h2>Let's build a practice patients trust.</h2>
-          <p>Whether you're a practice owner, a team lead, or planning an event, I'd love to hear what you're working toward.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn" href="mailto:absfound@gmail.com">Email Irena</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/irenahazon/">Message on LinkedIn</a>
+          <p class="prose">Whether you're a practice owner, a team lead, or planning an event, Irena would love to hear what you're working toward.</p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <span class="tag">LinkedIn</span>
+              <h3><a href="https://www.linkedin.com/in/irenahazon/">linkedin.com/in/irenahazon</a></h3>
+              <p>See Irena's full profile, writing, and activity — and send a connection request or message.</p>
+              <a class="btn" href="https://www.linkedin.com/in/irenahazon/">View her LinkedIn profile</a>
+            </div>
+            <div class="contact-card">
+              <span class="tag">Email</span>
+              <h3><a href="mailto:absfound@gmail.com">absfound@gmail.com</a></h3>
+              <p>For speaking engagements, team training, consulting, and coaching inquiries.</p>
+              <a class="btn" href="mailto:absfound@gmail.com">Email Irena</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer>
